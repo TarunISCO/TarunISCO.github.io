@@ -1,0 +1,20 @@
+title: "Tarun Bhardwaj | Senior Data Scientist & GenAI Architect"
+description: "Senior Data Scientist & GenAI Solution Architect with 7+ years of experience building intelligent, scalable AI systems."
+url: "https://tarunisco.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude from build
+exclude:
+  - .venv
+  - .vscode
+  - Gemfile.lock
+  - node_modules
+  - README.md
+
+# Keep files
+keep_files:
+  - assets

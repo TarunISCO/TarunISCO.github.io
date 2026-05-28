@@ -1,0 +1,124 @@
+categories:
+  - name: "GenAI & LLMs"
+    icon: "fas fa-brain"
+    skills:
+      - name: "Large Language Models"
+        level: 95
+      - name: "RAG & Vector Search"
+        level: 92
+      - name: "Prompt Engineering"
+        level: 90
+      - name: "Multi-Agent Systems"
+        level: 90
+      - name: "Text-to-SQL"
+        level: 92
+      - name: "Agentic Workflows / AI Agents"
+        level: 92
+      - name: "LLM Evaluation & Guardrails"
+        level: 85
+      - name: "Tool Calling & Function Calling"
+        level: 90
+
+  - name: "Machine Learning"
+    icon: "fas fa-robot"
+    skills:
+      - name: "Deep Learning / CNNs"
+        level: 90
+      - name: "NLP / Transformers"
+        level: 92
+      - name: "MLOps & Deployment"
+        level: 85
+      - name: "Computer Vision"
+        level: 78
+      - name: "Feature Engineering"
+        level: 90
+      - name: "Fraud / Anomaly Detection"
+        level: 88
+      - name: "Time Series Analysis"
+        level: 80
+      - name: "Recommendation Systems"
+        level: 78
+
+  - name: "Programming & Tools"
+    icon: "fas fa-code"
+    skills:
+      - name: "Python"
+        level: 95
+      - name: "SQL & Databases"
+        level: 88
+      - name: "Cloud (Azure/Databricks)"
+        level: 85
+      - name: "Docker & Kubernetes"
+        level: 75
+      - name: "PySpark / Big Data"
+        level: 85
+      - name: "CI/CD & DevOps"
+        level: 78
+      - name: "System Design & Architecture"
+        level: 88
+
+  - name: "Leadership & Strategy"
+    icon: "fas fa-users-gear"
+    skills:
+      - name: "Technical Mentorship"
+        level: 90
+      - name: "Solution Architecture"
+        level: 92
+      - name: "Client Engagement & Proposals"
+        level: 88
+      - name: "GenAI Strategy & Roadmapping"
+        level: 85
+
+tech_stack:
+  - icon: "fab fa-python"
+    name: "Python"
+  - icon: "fas fa-fire"
+    name: "PySpark"
+  - icon: "fas fa-link"
+    name: "LangChain"
+  - icon: "fas fa-diagram-project"
+    name: "LangGraph"
+  - icon: "fas fa-server"
+    name: "FastAPI"
+  - icon: "fas fa-flask"
+    name: "Flask"
+  - icon: "fas fa-cloud"
+    name: "Azure"
+  - icon: "fas fa-cloud"
+    name: "Azure OpenAI"
+  - icon: "fas fa-cubes"
+    name: "Databricks"
+  - icon: "fas fa-robot"
+    name: "OpenAI API"
+  - icon: "fas fa-comment-dots"
+    name: "Claude"
+  - icon: "fas fa-gem"
+    name: "Gemini"
+  - icon: "fas fa-plug"
+    name: "MCP"
+  - icon: "fas fa-brain"
+    name: "Google ADK"
+  - icon: "fas fa-layer-group"
+    name: "ChromaDB"
+  - icon: "fas fa-magnifying-glass"
+    name: "FAISS"
+  - icon: "fas fa-search"
+    name: "Azure AI Search"
+  - icon: "fas fa-calculator"
+    name: "NumPy"
+  - icon: "fas fa-chart-bar"
+    name: "Pandas"
+  - icon: "fas fa-display"
+    name: "Streamlit"
+  - icon: "fas fa-bolt"
+    name: "Redis"
+  - icon: "fas fa-database"
+    name: "PostgreSQL"
+  - icon: "fas fa-leaf"
+    name: "MongoDB"
+  - icon: "fas fa-database"
+    name: "SQL"
+  - icon: "fab fa-git-alt"
+    name: "Git"
+  - icon: "fab fa-docker"
+    name: "Docker"

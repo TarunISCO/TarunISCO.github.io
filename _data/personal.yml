@@ -1,0 +1,73 @@
+name: "Tarun Bhardwaj"
+title: "Senior Data Scientist & GenAI Architect"
+company: "Fractal"
+description: "Senior Data Scientist & <strong>GenAI Solution Architect</strong> with <strong>7+ years</strong> of experience building intelligent, scalable systems. Currently at <strong>Fractal</strong>, designing agentic AI platforms and LLM-powered automation."
+badge: "Available for consulting & collaborations"
+location: "Gurugram, Haryana, India"
+email: "tarunisco@gmail.com"
+availability: "Open to consulting & full-time"
+resume: "Profile.pdf"
+profile_image: "assets/profile.png"
+
+about:
+  - "I'm a <strong>Senior Data Scientist</strong> and <strong>Generative AI Solution Architect</strong> passionate about building intelligent, scalable systems that turn data into actionable insights. With over seven years of experience in machine learning, data engineering, and GenAI applications, I specialize in designing agentic AI platforms, LLM-powered automation, and insight-generation systems that drive measurable business value."
+  - "My work focuses on creating end-to-end AI solutions — from <strong>Text-to-SQL</strong> and <strong>RAG architectures</strong> to <strong>agentic workflows</strong> and multimodal intelligence — enabling seamless collaboration between humans and AI."
+  - "Beyond technology, I enjoy mentoring teams, shaping GenAI strategy, and exploring new ways to make AI more intuitive, explainable, and impactful across organizations."
+
+details:
+  - icon: "fas fa-map-marker-alt"
+    text: "Gurugram, Haryana, India"
+  - icon: "fas fa-briefcase"
+    text: "Senior Data Scientist @ Fractal"
+  - icon: "fas fa-graduation-cap"
+    text: "B.Tech, IT — IIIT Vadodara"
+  - icon: "fas fa-certificate"
+    text: "ML Advanced Nanodegree"
+
+stats:
+  - number: 7
+    suffix: "+"
+    label: "Years Experience"
+  - number: 30
+    suffix: "+"
+    label: "Projects Delivered"
+  - number: 12
+    suffix: "+"
+    label: "Publications"
+  - number: 5
+    suffix: "K+"
+    label: "GitHub Stars"
+
+typewriter_words:
+  - "agentic AI platforms"
+  - "Text-to-SQL frameworks"
+  - "RAG architectures"
+  - "multi-agent systems"
+  - "LLM-powered automation"
+  - "data-driven insights"
+
+social:
+  - platform: "GitHub"
+    url: "#"
+    icon: "fab fa-github"
+    label: "GitHub"
+  - platform: "LinkedIn"
+    url: "https://www.linkedin.com/in/tarunisco"
+    icon: "fab fa-linkedin-in"
+    label: "LinkedIn"
+  - platform: "Twitter"
+    url: "#"
+    icon: "fab fa-x-twitter"
+    label: "Twitter"
+  - platform: "Google Scholar"
+    url: "#"
+    icon: "fas fa-graduation-cap"
+    label: "Google Scholar"
+  - platform: "Medium"
+    url: "#"
+    icon: "fab fa-medium"
+    label: "Medium"
+  - platform: "Kaggle"
+    url: "#"
+    icon: "fab fa-kaggle"
+    label: "Kaggle"

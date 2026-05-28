@@ -251,15 +251,8 @@
     }
 
     const typewriterEl = document.getElementById('typewriter');
-    if (typewriterEl) {
-        new Typewriter(typewriterEl, [
-            'agentic AI platforms',
-            'Text-to-SQL frameworks',
-            'RAG architectures',
-            'multi-agent systems',
-            'LLM-powered automation',
-            'data-driven insights',
-        ]);
+    if (typewriterEl && window.siteData && window.siteData.typewriterWords) {
+        new Typewriter(typewriterEl, window.siteData.typewriterWords);
     }
 
     // ========================================
@@ -497,6 +490,68 @@
     // ========================================
     // Smooth reveal for sections
     // ========================================
+    // ========================================
+    // Project Detail Modal
+    // ========================================
+    const projectData = (window.siteData && window.siteData.projects) || {};
+
+    const projectModal = document.getElementById('projectModal');
+    if (projectModal) {
+        const modalCategory = document.getElementById('modalCategory');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalHighlights = document.getElementById('modalHighlights');
+        const modalTags = document.getElementById('modalTags');
+        const modalDemo = document.getElementById('modalDemo');
+        const modalGithub = document.getElementById('modalGithub');
+        const modalClose = projectModal.querySelector('.modal-close');
+        const modalBackdrop = projectModal.querySelector('.modal-backdrop');
+
+        function openModal(projectId) {
+            const data = projectData[projectId];
+            if (!data) return;
+
+            modalCategory.textContent = data.category;
+            modalTitle.textContent = data.title;
+            modalDescription.textContent = data.description;
+            modalHighlights.innerHTML = data.highlights.map(h => `<li>${h}</li>`).join('');
+            modalTags.innerHTML = data.tags.map(t => `<span>${t}</span>`).join('');
+            modalDemo.href = data.demo;
+            modalGithub.href = data.github;
+
+            // Hide links if no URL
+            modalDemo.style.display = data.demo === '#' ? 'none' : '';
+            modalGithub.style.display = data.github === '#' ? 'none' : '';
+
+            projectModal.classList.add('active');
+            projectModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            projectModal.classList.remove('active');
+            projectModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        // Open modal on "View Details" button click
+        document.querySelectorAll('.btn-view-details').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openModal(btn.getAttribute('data-project'));
+            });
+        });
+
+        // Close modal
+        modalClose.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && projectModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+
     // Add fade-in animation keyframes dynamically
     const style = document.createElement('style');
     style.textContent = `
