@@ -499,13 +499,33 @@
     if (projectModal) {
         const modalCategory = document.getElementById('modalCategory');
         const modalTitle = document.getElementById('modalTitle');
+        const modalMeta = document.getElementById('modalMeta');
+        const modalContext = document.getElementById('modalContext');
+        const modalContextSection = document.getElementById('modalContextSection');
         const modalDescription = document.getElementById('modalDescription');
+        const modalOverview = document.getElementById('modalOverview');
+        const modalOverviewSection = document.getElementById('modalOverviewSection');
+        const modalArchSection = document.getElementById('modalArchSection');
+        const modalArchImage = document.getElementById('modalArchImage');
         const modalHighlights = document.getElementById('modalHighlights');
+        const modalTechDetails = document.getElementById('modalTechDetails');
+        const modalTechDetailsSection = document.getElementById('modalTechDetailsSection');
+        const modalChallenges = document.getElementById('modalChallenges');
+        const modalChallengesSection = document.getElementById('modalChallengesSection');
+        const modalOutcomes = document.getElementById('modalOutcomes');
+        const modalOutcomesSection = document.getElementById('modalOutcomesSection');
         const modalTags = document.getElementById('modalTags');
-        const modalDemo = document.getElementById('modalDemo');
-        const modalGithub = document.getElementById('modalGithub');
         const modalClose = projectModal.querySelector('.modal-close');
         const modalBackdrop = projectModal.querySelector('.modal-backdrop');
+
+        function showSection(el, list, sectionEl) {
+            if (list && list.length > 0) {
+                el.innerHTML = list.map(h => `<li>${h}</li>`).join('');
+                sectionEl.style.display = '';
+            } else {
+                sectionEl.style.display = 'none';
+            }
+        }
 
         function openModal(projectId) {
             const data = projectData[projectId];
@@ -513,15 +533,46 @@
 
             modalCategory.textContent = data.category;
             modalTitle.textContent = data.title;
+
+            // Meta info (role, team, duration)
+            let metaHtml = '';
+            if (data.role) metaHtml += `<span><i class="fas fa-user-tie"></i> ${data.role}</span>`;
+            if (data.team_size) metaHtml += `<span><i class="fas fa-users"></i> Team of ${data.team_size}</span>`;
+            if (data.duration) metaHtml += `<span><i class="fas fa-clock"></i> ${data.duration}</span>`;
+            modalMeta.innerHTML = metaHtml;
+
+            // Business context
+            if (data.business_context) {
+                modalContext.textContent = data.business_context;
+                modalContextSection.style.display = '';
+            } else {
+                modalContextSection.style.display = 'none';
+            }
+
             modalDescription.textContent = data.description;
             modalHighlights.innerHTML = data.highlights.map(h => `<li>${h}</li>`).join('');
             modalTags.innerHTML = data.tags.map(t => `<span>${t}</span>`).join('');
-            modalDemo.href = data.demo;
-            modalGithub.href = data.github;
 
-            // Hide links if no URL
-            modalDemo.style.display = data.demo === '#' ? 'none' : '';
-            modalGithub.style.display = data.github === '#' ? 'none' : '';
+            // Overview
+            if (data.overview) {
+                modalOverview.textContent = data.overview;
+                modalOverviewSection.style.display = '';
+            } else {
+                modalOverviewSection.style.display = 'none';
+            }
+
+            // Architecture image
+            if (data.architecture_image) {
+                modalArchImage.src = data.architecture_image;
+                modalArchSection.style.display = '';
+            } else {
+                modalArchSection.style.display = 'none';
+            }
+
+            // Optional sections
+            showSection(modalTechDetails, data.technical_details, modalTechDetailsSection);
+            showSection(modalChallenges, data.challenges, modalChallengesSection);
+            showSection(modalOutcomes, data.outcomes, modalOutcomesSection);
 
             projectModal.classList.add('active');
             projectModal.setAttribute('aria-hidden', 'false');
@@ -535,7 +586,7 @@
         }
 
         // Open modal on "View Details" button click
-        document.querySelectorAll('.btn-view-details').forEach(btn => {
+        document.querySelectorAll('.btn-view-details, .project-details-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 openModal(btn.getAttribute('data-project'));

@@ -21,10 +21,17 @@
                     "category": {{ project.category_label | jsonify }},
                     "title": {{ project.title | jsonify }},
                     "description": {{ project.summary | jsonify }},
+                    "role": {{ project.role | jsonify }},
+                    "team_size": {{ project.team_size | jsonify }},
+                    "duration": {{ project.duration | jsonify }},
+                    "business_context": {{ project.business_context | jsonify }},
+                    "overview": {{ project.overview | jsonify }},
+                    "architecture_image": {{ project.architecture_image | jsonify }},
                     "highlights": {{ project.highlights | jsonify }},
-                    "tags": {{ project.full_tags | jsonify }},
-                    "demo": {{ project.demo | jsonify }},
-                    "github": {{ project.github | jsonify }}
+                    "technical_details": {{ project.technical_details | jsonify }},
+                    "challenges": {{ project.challenges | jsonify }},
+                    "outcomes": {{ project.outcomes | jsonify }},
+                    "tags": {{ project.full_tags | jsonify }}
                 }{% unless forloop.last %},{% endunless %}
                 {% endfor %}
             }

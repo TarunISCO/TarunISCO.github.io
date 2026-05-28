@@ -14,6 +14,18 @@ about:
   - "My work focuses on creating end-to-end AI solutions — from <strong>Text-to-SQL</strong> and <strong>RAG architectures</strong> to <strong>agentic workflows</strong> and multimodal intelligence — enabling seamless collaboration between humans and AI."
   - "Beyond technology, I enjoy mentoring teams, shaping GenAI strategy, and exploring new ways to make AI more intuitive, explainable, and impactful across organizations."
 
+career_interests: "I'm looking for roles where I can architect and build AI-first products at scale — ideally as a <strong>GenAI/ML Lead</strong> or <strong>AI Solution Architect</strong> in fast-paced environments that value technical depth, strategic thinking, and hands-on engineering."
+
+ask_me_about:
+  - "Agentic AI architectures"
+  - "Text-to-SQL at enterprise scale"
+  - "RAG pipeline optimization"
+  - "Multi-agent orchestration (MCP, LangGraph)"
+  - "LLM evaluation strategies"
+  - "ML system design patterns"
+  - "GenAI strategy & roadmapping"
+  - "Production ML at scale"
+
 details:
   - icon: "fas fa-map-marker-alt"
     text: "Gurugram, Haryana, India"

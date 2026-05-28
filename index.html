@@ -25,6 +25,7 @@ layout: default
             <li><a href="#experience" class="nav-link" data-text="Experience">Experience</a></li>
             <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
             <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+            <li><a href="#case-studies" class="nav-link" data-text="Case Studies">Case Studies</a></li>
             <li><a href="#publications" class="nav-link" data-text="Publications">Publications</a></li>
             <li><a href="#blog" class="nav-link" data-text="Blog">Blog</a></li>
             <li><a href="#testimonials" class="nav-link" data-text="Testimonials">Testimonials</a></li>
@@ -107,6 +108,22 @@ layout: default
                 {% for paragraph in site.data.personal.about %}
                 <p class="about-text">{{ paragraph }}</p>
                 {% endfor %}
+                {% if site.data.personal.career_interests %}
+                <div class="career-interests">
+                    <h4><i class="fas fa-compass"></i> What I'm Looking For</h4>
+                    <p>{{ site.data.personal.career_interests }}</p>
+                </div>
+                {% endif %}
+                {% if site.data.personal.ask_me_about %}
+                <div class="ask-me-about">
+                    <h4><i class="fas fa-comments"></i> Ask Me About</h4>
+                    <div class="ask-tags">
+                        {% for topic in site.data.personal.ask_me_about %}
+                        <span class="ask-tag">{{ topic }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
                 <div class="about-details">
                     {% for detail in site.data.personal.details %}
                     <div class="detail-item">
@@ -115,10 +132,16 @@ layout: default
                     </div>
                     {% endfor %}
                 </div>
-                <a href="{{ site.data.personal.resume | relative_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    <span>Download Resume</span>
-                    <i class="fas fa-download"></i>
-                </a>
+                <div class="about-actions">
+                    <a href="{{ site.data.personal.resume | relative_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <span>Download Resume</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <button class="btn btn-outline" id="printPortfolio" onclick="window.print()">
+                        <span>Download Portfolio</span>
+                        <i class="fas fa-file-pdf"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -130,6 +153,20 @@ layout: default
         <h2 class="section-title" data-aos="fade-up">
             <span class="section-number">02.</span> Experience
         </h2>
+        <!-- Career Journey Visual -->
+        <div class="career-journey" data-aos="fade-up">
+            <div class="journey-track">
+                {% for job in site.data.experience %}
+                <div class="journey-node{% if job.current %} current{% endif %}">
+                    <div class="journey-dot"></div>
+                    <div class="journey-label">
+                        <span class="journey-year">{{ job.date | split: '—' | first | strip }}</span>
+                        <span class="journey-role">{{ job.title }}</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
         <div class="timeline">
             {% for job in site.data.experience %}
             <div class="timeline-item" data-aos="fade-up" {% unless forloop.first %}data-aos-delay="{{ forloop.index0 | times: 100 }}"{% endunless %}>
@@ -143,6 +180,13 @@ layout: default
                         <span class="timeline-date">{{ job.date }}</span>
                     </div>
                     <p>{{ job.description }}</p>
+                    {% if job.metrics %}
+                    <div class="timeline-metrics">
+                        {% for metric in job.metrics %}
+                        <span class="metric-badge"><i class="fas fa-chart-line"></i> {{ metric }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                     <div class="timeline-tags">
                         {% for tag in job.tags %}
                         <span class="tag">{{ tag }}</span>
@@ -185,11 +229,11 @@ layout: default
             <div class="tech-scroll">
                 <div class="tech-scroll-inner">
                     {% for tech in site.data.skills.tech_stack %}
-                    <div class="tech-item"><i class="{{ tech.icon }}"></i><span>{{ tech.name }}</span></div>
+                    <div class="tech-item"><i class="{{ tech.icon }}"></i><span>{{ tech.name }}{% if tech.version != "" %} <small class="tech-version">{{ tech.version }}</small>{% endif %}</span></div>
                     {% endfor %}
                     <!-- Duplicate for seamless scroll -->
                     {% for tech in site.data.skills.tech_stack %}
-                    <div class="tech-item"><i class="{{ tech.icon }}"></i><span>{{ tech.name }}</span></div>
+                    <div class="tech-item"><i class="{{ tech.icon }}"></i><span>{{ tech.name }}{% if tech.version != "" %} <small class="tech-version">{{ tech.version }}</small>{% endif %}</span></div>
                     {% endfor %}
                 </div>
             </div>
@@ -216,8 +260,7 @@ layout: default
                         <i class="{{ project.icon }}"></i>
                     </div>
                     <div class="project-overlay">
-                        <a href="{{ project.demo }}" class="project-link" title="View Demo"><i class="fas fa-external-link-alt"></i></a>
-                        <a href="{{ project.github }}" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                        <button class="project-link project-details-btn" title="View Details" data-project="{{ project.id }}"><i class="fas fa-expand"></i></button>
                     </div>
                 </div>
                 <div class="project-info">
@@ -235,11 +278,66 @@ layout: default
     </div>
 </section>
 
+<!-- Case Studies Section -->
+<section id="case-studies" class="section case-studies">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+            <span class="section-number">05.</span> Case Studies
+        </h2>
+        <p class="section-subtitle" data-aos="fade-up">
+            Deep-dives into select projects — from problem to architecture to outcomes.
+        </p>
+        <div class="case-studies-grid">
+            {% for study in site.data.case_studies %}
+            <div class="case-study-card" data-aos="fade-up" {% unless forloop.first %}data-aos-delay="{{ forloop.index0 | times: 100 }}"{% endunless %}>
+                <div class="case-study-header">
+                    <div class="case-study-icon"><i class="{{ study.icon }}"></i></div>
+                    <span class="case-study-category">{{ study.category }}</span>
+                </div>
+                <h3>{{ study.title }}</h3>
+                <div class="case-study-meta">
+                    <span><i class="fas fa-user-tie"></i> {{ study.role }}</span>
+                    <span><i class="fas fa-clock"></i> {{ study.duration }}</span>
+                </div>
+                <div class="case-study-section">
+                    <h4>The Problem</h4>
+                    <p>{{ study.problem }}</p>
+                </div>
+                <div class="case-study-section">
+                    <h4>Approach</h4>
+                    <ul>
+                        {% for step in study.approach %}
+                        <li>{{ step }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="case-study-section">
+                    <h4>Results</h4>
+                    <ul class="results-list">
+                        {% for result in study.results %}
+                        <li>{{ result }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="case-study-section">
+                    <h4>Lessons Learned</h4>
+                    <ul class="lessons-list">
+                        {% for lesson in study.lessons %}
+                        <li>{{ lesson }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 <!-- Publications Section -->
 <section id="publications" class="section publications">
     <div class="container">
         <h2 class="section-title" data-aos="fade-up">
-            <span class="section-number">05.</span> Publications & Research
+            <span class="section-number">06.</span> Publications & Research
         </h2>
         <div class="publications-grid">
             {% for pub in site.data.publications %}
@@ -263,7 +361,7 @@ layout: default
 <section id="blog" class="section blog">
     <div class="container">
         <h2 class="section-title" data-aos="fade-up">
-            <span class="section-number">06.</span> Latest Articles
+            <span class="section-number">07.</span> Latest Articles
         </h2>
         <div class="blog-grid">
             {% for post in site.data.blog %}
@@ -295,7 +393,7 @@ layout: default
 <section id="testimonials" class="section testimonials">
     <div class="container">
         <h2 class="section-title" data-aos="fade-up">
-            <span class="section-number">07.</span> What People Say
+            <span class="section-number">08.</span> Recommendations
         </h2>
         <div class="testimonials-slider" data-aos="fade-up">
             <div class="testimonial-track" id="testimonialTrack">
@@ -306,8 +404,9 @@ layout: default
                     <div class="testimonial-author">
                         <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
                         <div>
-                            <h4>{{ testimonial.name }}</h4>
+                            <h4>{{ testimonial.name }}{% if testimonial.linkedin and testimonial.linkedin != "#" %} <a href="{{ testimonial.linkedin }}" target="_blank" rel="noopener noreferrer" class="author-linkedin"><i class="fab fa-linkedin-in"></i></a>{% endif %}</h4>
                             <span>{{ testimonial.title }}</span>
+                            {% if testimonial.relationship %}<span class="testimonial-relationship">{{ testimonial.relationship }}</span>{% endif %}
                         </div>
                     </div>
                 </div>
@@ -330,7 +429,7 @@ layout: default
 <section id="contact" class="section contact">
     <div class="container">
         <h2 class="section-title" data-aos="fade-up">
-            <span class="section-number">08.</span> Get In Touch
+            <span class="section-number">09.</span> Get In Touch
         </h2>
         <p class="section-subtitle" data-aos="fade-up">
             Have a project in mind or want to discuss AI? I'd love to hear from you.
@@ -420,21 +519,41 @@ layout: default
         <div class="modal-header">
             <span class="modal-category" id="modalCategory"></span>
             <h2 id="modalTitle"></h2>
+            <div class="modal-meta" id="modalMeta"></div>
         </div>
         <div class="modal-body">
+            <div class="modal-section modal-context" id="modalContextSection" style="display:none;">
+                <h4><i class="fas fa-briefcase"></i> Business Context</h4>
+                <p id="modalContext"></p>
+            </div>
+            <div class="modal-section modal-overview" id="modalOverviewSection" style="display:none;">
+                <p id="modalOverview"></p>
+            </div>
+            <div class="modal-section modal-architecture" id="modalArchSection" style="display:none;">
+                <h4><i class="fas fa-sitemap"></i> Architecture</h4>
+                <img id="modalArchImage" src="" alt="Architecture Diagram" class="modal-arch-img">
+            </div>
             <p id="modalDescription"></p>
             <div class="modal-section">
-                <h4>Key Highlights</h4>
+                <h4><i class="fas fa-star"></i> Key Highlights</h4>
                 <ul id="modalHighlights"></ul>
             </div>
+            <div class="modal-section" id="modalTechDetailsSection" style="display:none;">
+                <h4><i class="fas fa-cogs"></i> Technical Details</h4>
+                <ul id="modalTechDetails"></ul>
+            </div>
+            <div class="modal-section" id="modalChallengesSection" style="display:none;">
+                <h4><i class="fas fa-puzzle-piece"></i> Challenges & Solutions</h4>
+                <ul id="modalChallenges"></ul>
+            </div>
+            <div class="modal-section" id="modalOutcomesSection" style="display:none;">
+                <h4><i class="fas fa-chart-line"></i> Outcomes & Impact</h4>
+                <ul id="modalOutcomes"></ul>
+            </div>
             <div class="modal-section">
-                <h4>Tech Stack</h4>
+                <h4><i class="fas fa-layer-group"></i> Tech Stack</h4>
                 <div class="modal-tags" id="modalTags"></div>
             </div>
-        </div>
-        <div class="modal-footer">
-            <a href="#" id="modalDemo" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-            <a href="#" id="modalGithub" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Source Code</a>
         </div>
     </div>
 </div>

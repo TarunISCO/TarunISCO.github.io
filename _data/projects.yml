@@ -15,6 +15,10 @@ items:
     icon: "fas fa-network-wired"
     title: "Centralized GenAI Platform"
     summary: "End-to-end agentic AI platform for a global healthcare client supporting multiple Commercial IT use cases. Features modular MCP-server components, scalable Text-to-SQL and RAG pipelines with cross-domain collaboration capabilities."
+    role: "Lead Architect & Developer"
+    team_size: 8
+    duration: "6+ months"
+    business_context: "A Fortune 500 healthcare company needed a unified AI platform to consolidate multiple disconnected GenAI initiatives across their Commercial IT division, enabling consistent tooling, shared knowledge bases, and cross-domain collaboration."
     tags:
       - "Multi-Agent"
       - "MCP"
@@ -34,8 +38,11 @@ items:
       - "FastAPI"
       - "LangGraph"
       - "Azure"
-    demo: "#"
-    github: "#"
+    overview: ""
+    architecture_image: ""
+    technical_details: []
+    challenges: []
+    outcomes: []
 
   - id: "text-to-sql"
     category: "genai"
@@ -43,6 +50,10 @@ items:
     icon: "fas fa-database"
     title: "Agentic Text-to-SQL Engine"
     summary: "Customized Text-to-SQL framework using LangGraph empowering sales teams with on-demand conversational insights from structured enterprise data via natural language queries."
+    role: "Technical Lead"
+    team_size: 3
+    duration: "4 months"
+    business_context: "Sales teams lacked direct access to enterprise data, relying on analyst-created reports with multi-day turnaround. They needed on-demand, conversational access to structured data to make faster deal decisions."
     tags:
       - "LangGraph"
       - "LLMs"
@@ -60,8 +71,11 @@ items:
       - "Python"
       - "FastAPI"
       - "Azure OpenAI"
-    demo: "#"
-    github: "#"
+    overview: ""
+    architecture_image: ""
+    technical_details: []
+    challenges: []
+    outcomes: []
 
   - id: "clv-engine"
     category: "ml"
@@ -69,6 +83,10 @@ items:
     icon: "fas fa-chart-line"
     title: "Customer Lifetime Value Engine"
     summary: "Scalable CLV program integrating multi-system enterprise data to generate high-quality upsell opportunities for medical equipment. Generated a new sales funnel worth ~€6M per quarter."
+    role: "Data Scientist (Individual Contributor)"
+    team_size: 4
+    duration: "12 months"
+    business_context: "A European medical equipment manufacturer needed a data-driven approach to identify upsell opportunities across their existing customer base, replacing manual sales prospecting with predictive intelligence."
     tags:
       - "PySpark"
       - "Databricks"
@@ -86,8 +104,11 @@ items:
       - "Azure"
       - "MLflow"
       - "Python"
-    demo: "#"
-    github: "#"
+    overview: ""
+    architecture_image: ""
+    technical_details: []
+    challenges: []
+    outcomes: []
 
   - id: "fraud-detection"
     category: "ml"
@@ -95,6 +116,10 @@ items:
     icon: "fas fa-shield-halved"
     title: "Fraud Transaction Detection"
     summary: "Ensemble ML model for fraud detection on financial transactions with automated retraining, feature engineering, and continuous performance monitoring for production robustness."
+    role: "ML Engineer"
+    team_size: 2
+    duration: "8 months"
+    business_context: "A fintech company experiencing growing fraud losses needed a real-time detection system that could adapt to evolving attack patterns while maintaining low false-positive rates to avoid disrupting legitimate customers."
     tags:
       - "Scikit-learn"
       - "XGBoost"
@@ -112,8 +137,11 @@ items:
       - "Python"
       - "Docker"
       - "MLflow"
-    demo: "#"
-    github: "#"
+    overview: ""
+    architecture_image: ""
+    technical_details: []
+    challenges: []
+    outcomes: []
 
   - id: "face-recognition"
     category: "cv"
@@ -121,6 +149,10 @@ items:
     icon: "fas fa-face-smile"
     title: "Face Recognition & Spoof Detection"
     summary: "End-to-end face recognition system for authentication workflow optimization with spoof detection using image distortion analysis to prevent photo and video-based attacks."
+    role: "ML Engineer"
+    team_size: 2
+    duration: "6 months"
+    business_context: "An enterprise client needed to automate their employee authentication workflow while preventing spoofing attacks using printed photos or video replays of authorized users."
     tags:
       - "OpenCV"
       - "Flask"
@@ -138,8 +170,11 @@ items:
       - "Python"
       - "TensorFlow"
       - "dlib"
-    demo: "#"
-    github: "#"
+    overview: ""
+    architecture_image: ""
+    technical_details: []
+    challenges: []
+    outcomes: []
 
   - id: "healthcare-analytics"
     category: "genai"
@@ -147,6 +182,10 @@ items:
     icon: "fas fa-stethoscope"
     title: "Healthcare Equipment Analytics"
     summary: "3D analytical framework optimizing trade-in strategies for professional medical equipment, incorporating health indices, customer segmentation, and deal performance analytics across AU/NZ markets."
+    role: "Data Scientist"
+    team_size: 3
+    duration: "10 months"
+    business_context: "A healthcare equipment provider in AU/NZ needed data-driven trade-in pricing and timing strategies to maximize equipment refresh rates while maintaining profitability across diverse customer segments."
     tags:
       - "Analytics"
       - "PySpark"
@@ -164,5 +203,8 @@ items:
       - "Python"
       - "Power BI"
       - "Databricks"
-    demo: "#"
-    github: "#"
+    overview: ""
+    architecture_image: ""
+    technical_details: []
+    challenges: []
+    outcomes: []

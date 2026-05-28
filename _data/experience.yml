@@ -3,6 +3,9 @@
   date: "Apr 2025 — Present"
   current: true
   description: "Leading end-to-end architecture and development of a centralized GenAI platform for a global healthcare client. Building scalable agentic Text-to-SQL and RAG pipelines with modular MCP-server components. Driving cross-domain collaboration, technical mentorship, and GenAI capability development across the organization."
+  metrics:
+    - "Architected platform serving 5+ business units"
+    - "Mentoring team of 8 data scientists"
   tags:
     - "Multi-Agent Systems"
     - "RAG"
@@ -16,6 +19,10 @@
   date: "Dec 2021 — Mar 2025"
   current: false
   description: "Developed a customized Text-to-SQL framework using LangGraph for conversational insights from enterprise data. Built a scalable Customer Lifetime Value (CLV) program generating a new sales funnel valued at ~€6M per quarter. Delivered critical data reports impacting €19M in open sales opportunities."
+  metrics:
+    - "~€6M/quarter new sales pipeline generated"
+    - "€19M in open sales opportunities impacted"
+    - "Reduced data processing time by 60%"
   tags:
     - "LangChain"
     - "PySpark"
@@ -28,6 +35,9 @@
   date: "Aug 2021 — Dec 2021"
   current: false
   description: "Led a team of five in developing an identity resolution system for transactional data. Researched and guided a project leveraging image captioning and reinforcement learning to automate conversion of UI mockups into HTML/CSS structures."
+  metrics:
+    - "Led team of 5 engineers"
+    - "Delivered identity resolution system in 4 months"
   tags:
     - "Team Lead"
     - "Identity Resolution"
@@ -39,6 +49,10 @@
   date: "May 2019 — Jul 2021"
   current: false
   description: "Developed and deployed a face recognition system to optimize authentication workflows. Built a spoof detection model using image distortion analysis. Designed an ensemble ML model for fraud transaction detection with automated retraining and performance monitoring."
+  metrics:
+    - "99%+ spoof detection accuracy"
+    - "98%+ fraud detection precision"
+    - "Reduced authentication time by 40%"
   tags:
     - "Computer Vision"
     - "Flask"
@@ -50,6 +64,9 @@
   date: "Jan 2019 — May 2019"
   current: false
   description: "Conducted data analysis on financial transaction datasets to identify fraud patterns. Applied feature engineering and ML techniques using classifiers such as logistic regression, decision trees, and random forests for predictive fraud detection models."
+  metrics:
+    - "Analyzed 1M+ transaction records"
+    - "Built baseline models achieving 92% accuracy"
   tags:
     - "Python"
     - "Scikit-learn"
