@@ -723,7 +723,7 @@ ul { list-style: none; }
    ============================================ */
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     padding-left: 40px;
 }
@@ -1214,6 +1214,7 @@ ul { list-style: none; }
 .journey-track {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     position: relative;
     min-width: max-content;
     padding: 0 20px;
@@ -1307,7 +1308,7 @@ ul { list-style: none; }
    ============================================ */
 .capacity-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr;
     gap: 12px;
     margin: 20px 0 16px;
 }
