@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarun Bhardwaj | Senior Data Scientist & GenAI Architect</title>
+    <meta name="description" content="Senior Data Scientist & GenAI Solution Architect with 7+ years of experience building intelligent, scalable AI systems. Currently at Fractal, specializing in agentic AI platforms, LLM-powered automation, and RAG architectures.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="neural-loader">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p>Initializing...</p>
+        </div>
+    </div>
+
+    <!-- Cursor glow effect -->
+    <div id="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>TB<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+                <li><a href="#experience" class="nav-link" data-text="Experience">Experience</a></li>
+                <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+                <li><a href="#publications" class="nav-link" data-text="Publications">Publications</a></li>
+                <li><a href="#blog" class="nav-link" data-text="Blog">Blog</a></li>
+                <li><a href="#testimonials" class="nav-link" data-text="Testimonials">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link nav-cta" data-text="Contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <canvas id="neural-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                Available for consulting &amp; collaborations
+            </div>
+            <h1 class="hero-title">
+                <span class="greeting" id="greeting">Hello, I'm</span>
+                <span class="name glitch-text" data-text="Tarun Bhardwaj">Tarun Bhardwaj</span>
+            </h1>
+            <div class="hero-subtitle-wrapper">
+                <span class="hero-subtitle-prefix">I build </span>
+                <span class="typewriter" id="typewriter"></span>
+                <span class="cursor-blink">|</span>
+            </div>
+            <p class="hero-description">
+                Senior Data Scientist &amp; <strong>GenAI Solution Architect</strong> with <strong>7+ years</strong> of experience 
+                building intelligent, scalable systems. Currently at <strong>Fractal</strong>, designing agentic AI platforms 
+                and LLM-powered automation.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Get In Touch</span>
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="7">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="30">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="12">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Publications</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5">0</span><span class="stat-suffix">K+</span>
+                    <span class="stat-label">GitHub Stars</span>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="section-number">01.</span> About Me
+            </h2>
+            <div class="about-grid">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="image-wrapper">
+                        <img src="assets/profile.png" alt="Tarun Bhardwaj" class="profile-photo">
+                        <div class="image-border"></div>
+                        <div class="image-dots"></div>
+                    </div>
+                </div>
+                <div class="about-content" data-aos="fade-left">
+                    <p class="about-text">
+                        I'm a <strong>Senior Data Scientist</strong> and <strong>Generative AI Solution Architect</strong> 
+                        passionate about building intelligent, scalable systems that turn data into actionable insights. 
+                        With over seven years of experience in machine learning, data engineering, and GenAI applications, 
+                        I specialize in designing agentic AI platforms, LLM-powered automation, and insight-generation 
+                        systems that drive measurable business value.
+                    </p>
+                    <p class="about-text">
+                        My work focuses on creating end-to-end AI solutions — from <strong>Text-to-SQL</strong> and 
+                        <strong>RAG architectures</strong> to <strong>agentic workflows</strong> and multimodal 
+                        intelligence — enabling seamless collaboration between humans and AI.
+                    </p>
+                    <p class="about-text">
+                        Beyond technology, I enjoy mentoring teams, shaping GenAI strategy, and exploring new ways 
+                        to make AI more intuitive, explainable, and impactful across organizations.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Gurugram, Haryana, India</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Senior Data Scientist @ Fractal</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>B.Tech, IT — IIIT Vadodara</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>ML Advanced Nanodegree</span>
+                        </div>
+                    </div>
+                    <a href="Profile.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <span>Download Resume</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="section-number">02.</span> Experience
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot pulse"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Senior Data Scientist</h3>
+                                <span class="company">Fractal</span>
+                            </div>
+                            <span class="timeline-date">Apr 2025 — Present</span>
+                        </div>
+                        <p>Leading end-to-end architecture and development of a centralized GenAI platform 
+                        for a global healthcare client. Building scalable agentic Text-to-SQL and RAG pipelines 
+                        with modular MCP-server components. Driving cross-domain collaboration, technical 
+                        mentorship, and GenAI capability development across the organization.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Multi-Agent Systems</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">LangGraph</span>
+                            <span class="tag">MCP</span>
+                            <span class="tag">Text-to-SQL</span>
+                            <span class="tag">OpenAI Agents SDK</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Data Scientist</h3>
+                                <span class="company">Fractal</span>
+                            </div>
+                            <span class="timeline-date">Dec 2021 — Mar 2025</span>
+                        </div>
+                        <p>Developed a customized Text-to-SQL framework using LangGraph for conversational 
+                        insights from enterprise data. Built a scalable Customer Lifetime Value (CLV) program 
+                        generating a new sales funnel valued at ~€6M per quarter. Delivered critical data reports 
+                        impacting €19M in open sales opportunities.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">LangChain</span>
+                            <span class="tag">PySpark</span>
+                            <span class="tag">Azure</span>
+                            <span class="tag">Databricks</span>
+                            <span class="tag">CRM Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Machine Learning Team Lead</h3>
+                                <span class="company">Cognam Technologies Pvt. Ltd.</span>
+                            </div>
+                            <span class="timeline-date">Aug 2021 — Dec 2021</span>
+                        </div>
+                        <p>Led a team of five in developing an identity resolution system for transactional 
+                        data. Researched and guided a project leveraging image captioning and reinforcement 
+                        learning to automate conversion of UI mockups into HTML/CSS structures.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Team Lead</span>
+                            <span class="tag">Identity Resolution</span>
+                            <span class="tag">Reinforcement Learning</span>
+                            <span class="tag">NLP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Machine Learning Engineer</h3>
+                                <span class="company">Cognam Technologies Pvt. Ltd.</span>
+                            </div>
+                            <span class="timeline-date">May 2019 — Jul 2021</span>
+                        </div>
+                        <p>Developed and deployed a face recognition system to optimize authentication workflows. 
+                        Built a spoof detection model using image distortion analysis. Designed an ensemble ML 
+                        model for fraud transaction detection with automated retraining and performance monitoring.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Fraud Detection</span>
+                            <span class="tag">Face Recognition</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Software Engineer Trainee</h3>
+                                <span class="company">Cognam Technologies Pvt. Ltd.</span>
+                            </div>
+                            <span class="timeline-date">Jan 2019 — May 2019</span>
+                        </div>
+                        <p>Conducted data analysis on financial transaction datasets to identify fraud patterns. 
+                        Applied feature engineering and ML techniques using classifiers such as logistic regression, 
+                        decision trees, and random forests for predictive fraud detection models.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Feature Engineering</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="section-number">03.</span> Skills & Expertise
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <h3>GenAI & LLMs</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Large Language Models</span><span>95%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>RAG & Vector Search</span><span>92%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Prompt Engineering</span><span>90%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Multi-Agent Systems</span><span>90%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Text-to-SQL</span><span>92%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Agentic Workflows / AI Agents</span><span>92%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>LLM Evaluation & Guardrails</span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Tool Calling & Function Calling</span><span>90%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Deep Learning / CNNs</span><span>90%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>NLP / Transformers</span><span>92%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>MLOps & Deployment</span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Computer Vision</span><span>78%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Feature Engineering</span><span>90%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Fraud / Anomaly Detection</span><span>88%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Time Series Analysis</span><span>80%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Recommendation Systems</span><span>78%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3>Programming & Tools</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Python</span><span>95%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>SQL & Databases</span><span>88%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Cloud (Azure/Databricks)</span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Docker & Kubernetes</span><span>75%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>PySpark / Big Data</span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>CI/CD & DevOps</span><span>78%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>System Design & Architecture</span><span>88%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-users-gear"></i></div>
+                        <h3>Leadership & Strategy</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Technical Mentorship</span><span>90%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Solution Architecture</span><span>92%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Client Engagement & Proposals</span><span>88%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>GenAI Strategy & Roadmapping</span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tech Stack Logos -->
+            <div class="tech-stack" data-aos="fade-up">
+                <h3 class="tech-stack-title">Tech Stack</h3>
+                <div class="tech-scroll">
+                    <div class="tech-scroll-inner">
+                        <div class="tech-item"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="tech-item"><i class="fas fa-fire"></i><span>PySpark</span></div>
+                        <div class="tech-item"><i class="fas fa-link"></i><span>LangChain</span></div>
+                        <div class="tech-item"><i class="fas fa-diagram-project"></i><span>LangGraph</span></div>
+                        <div class="tech-item"><i class="fas fa-server"></i><span>FastAPI</span></div>
+                        <div class="tech-item"><i class="fas fa-flask"></i><span>Flask</span></div>
+                        <div class="tech-item"><i class="fas fa-cloud"></i><span>Azure</span></div>
+                        <div class="tech-item"><i class="fas fa-cloud"></i><span>Azure OpenAI</span></div>
+                        <div class="tech-item"><i class="fas fa-cubes"></i><span>Databricks</span></div>
+                        <div class="tech-item"><i class="fas fa-robot"></i><span>OpenAI API</span></div>
+                        <div class="tech-item"><i class="fas fa-comment-dots"></i><span>Claude</span></div>
+                        <div class="tech-item"><i class="fas fa-gem"></i><span>Gemini</span></div>
+                        <div class="tech-item"><i class="fas fa-plug"></i><span>MCP</span></div>
+                        <div class="tech-item"><i class="fas fa-brain"></i><span>Google ADK</span></div>
+                        <div class="tech-item"><i class="fas fa-layer-group"></i><span>ChromaDB</span></div>
+                        <div class="tech-item"><i class="fas fa-magnifying-glass"></i><span>FAISS</span></div>
+                        <div class="tech-item"><i class="fas fa-search"></i><span>Azure AI Search</span></div>
+                        <div class="tech-item"><i class="fas fa-calculator"></i><span>NumPy</span></div>
+                        <div class="tech-item"><i class="fas fa-chart-bar"></i><span>Pandas</span></div>
+                        <div class="tech-item"><i class="fas fa-display"></i><span>Streamlit</span></div>
+                        <div class="tech-item"><i class="fas fa-bolt"></i><span>Redis</span></div>
+                        <div class="tech-item"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+                        <div class="tech-item"><i class="fas fa-leaf"></i><span>MongoDB</span></div>
+                        <div class="tech-item"><i class="fas fa-database"></i><span>SQL</span></div>
+                        <div class="tech-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                        <div class="tech-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+                        <!-- Duplicate for seamless scroll -->
+                        <div class="tech-item"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="tech-item"><i class="fas fa-fire"></i><span>PySpark</span></div>
+                        <div class="tech-item"><i class="fas fa-link"></i><span>LangChain</span></div>
+                        <div class="tech-item"><i class="fas fa-diagram-project"></i><span>LangGraph</span></div>
+                        <div class="tech-item"><i class="fas fa-server"></i><span>FastAPI</span></div>
+                        <div class="tech-item"><i class="fas fa-flask"></i><span>Flask</span></div>
+                        <div class="tech-item"><i class="fas fa-cloud"></i><span>Azure</span></div>
+                        <div class="tech-item"><i class="fas fa-cloud"></i><span>Azure OpenAI</span></div>
+                        <div class="tech-item"><i class="fas fa-cubes"></i><span>Databricks</span></div>
+                        <div class="tech-item"><i class="fas fa-robot"></i><span>OpenAI API</span></div>
+                        <div class="tech-item"><i class="fas fa-comment-dots"></i><span>Claude</span></div>
+                        <div class="tech-item"><i class="fas fa-gem"></i><span>Gemini</span></div>
+                        <div class="tech-item"><i class="fas fa-plug"></i><span>MCP</span></div>
+                        <div class="tech-item"><i class="fas fa-brain"></i><span>Google ADK</span></div>
+                        <div class="tech-item"><i class="fas fa-layer-group"></i><span>ChromaDB</span></div>
+                        <div class="tech-item"><i class="fas fa-magnifying-glass"></i><span>FAISS</span></div>
+                        <div class="tech-item"><i class="fas fa-search"></i><span>Azure AI Search</span></div>
+                        <div class="tech-item"><i class="fas fa-calculator"></i><span>NumPy</span></div>
+                        <div class="tech-item"><i class="fas fa-chart-bar"></i><span>Pandas</span></div>
+                        <div class="tech-item"><i class="fas fa-display"></i><span>Streamlit</span></div>
+                        <div class="tech-item"><i class="fas fa-bolt"></i><span>Redis</span></div>
+                        <div class="tech-item"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+                        <div class="tech-item"><i class="fas fa-leaf"></i><span>MongoDB</span></div>
+                        <div class="tech-item"><i class="fas fa-database"></i><span>SQL</span></div>
+                        <div class="tech-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                        <div class="tech-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="section-number">04.</span> Featured Projects
+            </h2>
+            <div class="project-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="genai">GenAI</button>
+                <button class="filter-btn" data-filter="ml">ML</button>
+                <button class="filter-btn" data-filter="cv">Computer Vision</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="genai" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">GenAI</span>
+                        <h3>Centralized GenAI Platform</h3>
+                        <p>End-to-end agentic AI platform for a global healthcare client supporting multiple 
+                        Commercial IT use cases. Features modular MCP-server components, scalable Text-to-SQL 
+                        and RAG pipelines with cross-domain collaboration capabilities.</p>
+                        <div class="project-tags">
+                            <span>Multi-Agent</span><span>MCP</span><span>RAG</span><span>Text-to-SQL</span><span>FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="genai" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">GenAI</span>
+                        <h3>Agentic Text-to-SQL Engine</h3>
+                        <p>Customized Text-to-SQL framework using LangGraph empowering sales teams with 
+                        on-demand conversational insights from structured enterprise data via natural 
+                        language queries.</p>
+                        <div class="project-tags">
+                            <span>LangGraph</span><span>LLMs</span><span>SQL</span><span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ml" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">ML</span>
+                        <h3>Customer Lifetime Value Engine</h3>
+                        <p>Scalable CLV program integrating multi-system enterprise data to generate 
+                        high-quality upsell opportunities for medical equipment. Generated a new sales 
+                        funnel worth ~€6M per quarter.</p>
+                        <div class="project-tags">
+                            <span>PySpark</span><span>Databricks</span><span>CRM Analytics</span><span>Azure</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ml" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">ML</span>
+                        <h3>Fraud Transaction Detection</h3>
+                        <p>Ensemble ML model for fraud detection on financial transactions with automated 
+                        retraining, feature engineering, and continuous performance monitoring for 
+                        production robustness.</p>
+                        <div class="project-tags">
+                            <span>Scikit-learn</span><span>XGBoost</span><span>Flask</span><span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="cv" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-face-smile"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Computer Vision</span>
+                        <h3>Face Recognition & Spoof Detection</h3>
+                        <p>End-to-end face recognition system for authentication workflow optimization 
+                        with spoof detection using image distortion analysis to prevent photo and 
+                        video-based attacks.</p>
+                        <div class="project-tags">
+                            <span>OpenCV</span><span>Flask</span><span>Deep Learning</span><span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="genai" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">GenAI</span>
+                        <h3>Healthcare Equipment Analytics</h3>
+                        <p>3D analytical framework optimizing trade-in strategies for professional medical 
+                        equipment, incorporating health indices, customer segmentation, and deal performance 
+                        analytics across AU/NZ markets.</p>
+                        <div class="project-tags">
+                            <span>Analytics</span><span>PySpark</span><span>Azure</span><span>Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section publications">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="section-number">05.</span> Publications & Research
+            </h2>
+            <div class="publications-grid">
+                <div class="publication-card" data-aos="fade-up">
+                    <div class="pub-type"><i class="fas fa-scroll"></i> Conference Paper</div>
+                    <h3>Efficient Fine-Tuning of LLMs for Domain-Specific Tasks</h3>
+                    <p class="pub-venue">NeurIPS 2024 Workshop on Foundation Models</p>
+                    <p class="pub-authors">A. Morgan, J. Smith, R. Chen</p>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                        <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
+                        <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> Cite</a>
+                    </div>
+                </div>
+                <div class="publication-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pub-type"><i class="fas fa-scroll"></i> Journal Article</div>
+                    <h3>RAG vs Fine-Tuning: A Comprehensive Evaluation Framework</h3>
+                    <p class="pub-venue">Journal of Machine Learning Research, 2024</p>
+                    <p class="pub-authors">A. Morgan, L. Wang</p>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                        <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
+                        <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> Cite</a>
+                    </div>
+                </div>
+                <div class="publication-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pub-type"><i class="fas fa-scroll"></i> Conference Paper</div>
+                    <h3>Attention-Based Fraud Detection in Financial Transactions</h3>
+                    <p class="pub-venue">AAAI 2022</p>
+                    <p class="pub-authors">A. Morgan, K. Patel, S. Lee</p>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                        <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
+                        <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> Cite</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section blog">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="section-number">06.</span> Latest Articles
+            </h2>
+            <div class="blog-grid">
+                <article class="blog-card" data-aos="fade-up">
+                    <div class="blog-image">
+                        <div class="blog-image-placeholder">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span class="blog-date">Mar 2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-clock"></i> 8 min read</span>
+                            <span><i class="fas fa-tag"></i> GenAI</span>
+                        </div>
+                        <h3>Building Production-Ready AI Agents: Lessons Learned</h3>
+                        <p>A comprehensive guide to architecting reliable AI agents, from prompt design 
+                        to error handling and evaluation frameworks.</p>
+                        <a href="#" class="blog-read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-image">
+                        <div class="blog-image-placeholder">
+                            <i class="fas fa-magnifying-glass-chart"></i>
+                        </div>
+                        <span class="blog-date">Feb 2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-clock"></i> 12 min read</span>
+                            <span><i class="fas fa-tag"></i> RAG</span>
+                        </div>
+                        <h3>Advanced RAG Techniques That Actually Work</h3>
+                        <p>Beyond naive RAG — exploring hybrid search, re-ranking, query decomposition, 
+                        and evaluation strategies for production systems.</p>
+                        <a href="#" class="blog-read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-image">
+                        <div class="blog-image-placeholder">
+                            <i class="fas fa-scale-balanced"></i>
+                        </div>
+                        <span class="blog-date">Jan 2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-tag"></i> MLOps</span>
+                        </div>
+                        <h3>LLM Evaluation: Metrics That Matter</h3>
+                        <p>How to properly evaluate LLM outputs for your use case — covering automated 
+                        metrics, human evaluation, and LLM-as-judge approaches.</p>
+                        <a href="#" class="blog-read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="section-number">07.</span> What People Say
+            </h2>
+            <div class="testimonials-slider" data-aos="fade-up">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                        <p>"Alex is one of the most talented data scientists I've worked with. Their ability 
+                        to translate complex business problems into elegant AI solutions is remarkable."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                            <div>
+                                <h4>Sarah Johnson</h4>
+                                <span>VP of Engineering, TechCorp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                        <p>"Working with Alex on our GenAI initiative was transformative. They brought deep 
+                        technical expertise and a rare talent for explaining complex concepts simply."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                            <div>
+                                <h4>David Chen</h4>
+                                <span>CTO, DataDriven Inc.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                        <p>"Alex's fraud detection system saved us millions. Their methodical approach to 
+                        problem-solving and attention to production readiness sets them apart."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                            <div>
+                                <h4>Maria Rodriguez</h4>
+                                <span>Head of Data, FinTech Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn" id="prevTestimonial" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                    <button class="testimonial-btn" id="nextTestimonial" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="section-number">08.</span> Get In Touch
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up">
+                Have a project in mind or want to discuss AI? I'd love to hear from you.
+            </p>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:tarunisco@gmail.com">tarunisco@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <span>Gurugram, Haryana, India</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-calendar-check"></i></div>
+                        <div>
+                            <h4>Availability</h4>
+                            <span>Open to consulting & full-time</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/tarunisco" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="#" class="social-link" aria-label="Medium"><i class="fab fa-medium"></i></a>
+                        <a href="#" class="social-link" aria-label="Kaggle"><i class="fab fa-kaggle"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" data-aos="fade-left" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required autocomplete="name">
+                        <label for="name">Your Name</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                        <label for="email">Your Email</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>TB<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">Designed & Built by Tarun Bhardwaj</p>
+                <p class="footer-copyright">&copy; 2026 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

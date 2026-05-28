@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarun Bhardwaj — Resume</title>
+    <style>
+        /* ── Reset ── */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #1a1a2e;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
+            --text: #1e293b;
+            --muted: #475569;
+            --light: #94a3b8;
+            --border: #cbd5e1;
+            --bg: #ffffff;
+        }
+
+        @page { size: A4; margin: 0; }
+
+        body {
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: #e2e8f0;
+            line-height: 1.45;
+            font-size: 9.5pt;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        a { color: var(--accent); text-decoration: none; }
+
+        /* ── Page shell ── */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 16px auto;
+            background: var(--bg);
+            box-shadow: 0 2px 20px rgba(0,0,0,.1);
+            padding: 0;
+            overflow: hidden;
+        }
+        @media print {
+            body { background: #fff; }
+            .page { margin: 0; box-shadow: none; }
+        }
+
+        /* ── Header banner ── */
+        .banner {
+            background: var(--primary);
+            color: #fff;
+            padding: 28px 32px 22px;
+        }
+        .banner h1 {
+            font-size: 24pt;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+        .banner .title {
+            font-size: 11pt;
+            color: #93c5fd;
+            font-weight: 600;
+            margin-top: 3px;
+        }
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 18px;
+            margin-top: 10px;
+            font-size: 8.5pt;
+            color: #cbd5e1;
+        }
+        .contact-row a { color: #93c5fd; }
+        .contact-row span { white-space: nowrap; }
+
+        /* ── Body content ── */
+        .body { padding: 20px 32px 24px; }
+
+        /* Summary */
+        .summary {
+            font-size: 9pt;
+            color: var(--muted);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Section heading */
+        .sec-title {
+            font-size: 10pt;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 8px;
+            padding-bottom: 3px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        section { margin-bottom: 14px; }
+        section:last-child { margin-bottom: 0; }
+
+        /* ── Skills grid ── */
+        .skills-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 20px;
+            margin-bottom: 2px;
+        }
+        .skill-row {
+            display: flex;
+            gap: 6px;
+            align-items: baseline;
+        }
+        .skill-label {
+            font-size: 8.5pt;
+            font-weight: 600;
+            color: var(--text);
+            white-space: nowrap;
+            min-width: 95px;
+        }
+        .skill-values {
+            font-size: 8.5pt;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        /* ── Experience entry ── */
+        .entry { margin-bottom: 10px; page-break-inside: avoid; }
+        .entry:last-child { margin-bottom: 0; }
+        .entry-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .entry-top h4 {
+            font-size: 10pt;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .entry-top .date {
+            font-size: 8.5pt;
+            color: var(--light);
+            white-space: nowrap;
+        }
+        .entry-company {
+            font-size: 9pt;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        .entry ul {
+            padding-left: 15px;
+            font-size: 9pt;
+            color: var(--muted);
+        }
+        .entry ul li { margin-bottom: 1px; }
+        .entry-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            margin-top: 3px;
+        }
+        .tag {
+            font-size: 7pt;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 1px 5px;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+
+        /* ── Projects ── */
+        .proj { margin-bottom: 6px; page-break-inside: avoid; }
+        .proj:last-child { margin-bottom: 0; }
+        .proj h4 { font-size: 9.5pt; font-weight: 600; }
+        .proj .sub { font-weight: 400; color: var(--light); }
+        .proj p { font-size: 8.5pt; color: var(--muted); }
+
+        /* ── Education / Certs two‑col ── */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 28px;
+        }
+        .two-col .block h4 { font-size: 9.5pt; font-weight: 600; }
+        .two-col .block .sub-text { font-size: 8.5pt; color: var(--accent); }
+        .two-col .block .dim { font-size: 8pt; color: var(--light); }
+        .two-col ul { list-style: none; font-size: 8.5pt; color: var(--muted); }
+        .two-col ul li { padding-left: 10px; position: relative; margin-bottom: 2px; }
+        .two-col ul li::before { content: '›'; position: absolute; left: 0; color: var(--accent); }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- ═══ HEADER BANNER ═══ -->
+    <header class="banner">
+        <h1>Tarun Bhardwaj</h1>
+        <div class="title">Senior Data Scientist &amp; GenAI Solution Architect</div>
+        <div class="contact-row">
+            <span>✉ <a href="mailto:tarunisco@gmail.com">tarunisco@gmail.com</a></span>
+            <span>🔗 <a href="https://www.linkedin.com/in/tarunisco" target="_blank" rel="noopener noreferrer">linkedin.com/in/tarunisco</a></span>
+            <span>📍 Gurugram, Haryana, India</span>
+            <span style="color:#64748b">📱 [phone number]</span>
+            <span style="color:#64748b">🌐 [portfolio URL]</span>
+        </div>
+    </header>
+
+    <!-- ═══ BODY ═══ -->
+    <div class="body">
+
+        <!-- Summary -->
+        <p class="summary">
+            Results-driven Senior Data Scientist and Generative AI Solution Architect with <strong>7+ years</strong>
+            of experience building intelligent, scalable AI systems. Specializing in agentic AI platforms,
+            LLM-powered automation, RAG architectures, and Text-to-SQL solutions. Proven track record of
+            delivering measurable business value — including a <strong>~€6M/quarter</strong> sales funnel and
+            data-driven insights impacting <strong>€19M</strong> in open opportunities. Currently leading
+            GenAI platform architecture at <strong>Fractal</strong> for a global healthcare client.
+        </p>
+
+        <!-- ── Technical Skills ── -->
+        <section>
+            <h3 class="sec-title">Technical Skills</h3>
+            <div class="skills-table">
+                <div class="skill-row">
+                    <span class="skill-label">GenAI &amp; LLMs</span>
+                    <span class="skill-values">LLMs · RAG · Multi-Agent Systems · Agentic Workflows · Text-to-SQL · Prompt Engineering · LLM Evaluation · Tool/Function Calling</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Machine Learning</span>
+                    <span class="skill-values">Deep Learning · NLP/Transformers · Computer Vision · MLOps · Feature Engineering · Fraud Detection · Time Series</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Languages &amp; Libs</span>
+                    <span class="skill-values">Python · SQL · PySpark · LangChain · LangGraph · FastAPI · Flask · Streamlit · OpenAI SDK · MCP · Google ADK</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Cloud &amp; Data</span>
+                    <span class="skill-values">Azure · Azure OpenAI · Databricks · Docker · PostgreSQL · MongoDB · Redis · ChromaDB · FAISS · Azure AI Search · Git · CI/CD</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Professional Experience ── -->
+        <section>
+            <h3 class="sec-title">Professional Experience</h3>
+
+            <div class="entry">
+                <div class="entry-top">
+                    <h4>Senior Data Scientist</h4>
+                    <span class="date">Apr 2025 — Present</span>
+                </div>
+                <div class="entry-company">Fractal · Gurugram, India</div>
+                <ul>
+                    <li>Leading end-to-end architecture of a centralized GenAI platform for a global healthcare client, supporting multiple Commercial IT use cases</li>
+                    <li>Building scalable agentic Text-to-SQL and RAG pipelines with modular MCP-server components</li>
+                    <li>Driving cross-domain collaboration, technical mentorship, and GenAI capability development across the organization</li>
+                </ul>
+                <div class="entry-tags">
+                    <span class="tag">Multi-Agent Systems</span>
+                    <span class="tag">RAG</span>
+                    <span class="tag">LangGraph</span>
+                    <span class="tag">MCP</span>
+                    <span class="tag">Text-to-SQL</span>
+                    <span class="tag">OpenAI Agents SDK</span>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-top">
+                    <h4>Data Scientist</h4>
+                    <span class="date">Dec 2021 — Mar 2025</span>
+                </div>
+                <div class="entry-company">Fractal · Gurugram, India</div>
+                <ul>
+                    <li>Developed a customized Text-to-SQL framework using LangGraph for conversational insights from enterprise data</li>
+                    <li>Built a scalable CLV program integrating multi-system enterprise data — generated a new sales funnel valued at <strong>~€6M/quarter</strong></li>
+                    <li>Delivered critical data reports impacting <strong>€19M</strong> in open sales opportunities</li>
+                    <li>Designed 3D analytical framework optimizing trade-in strategies for medical equipment across AU/NZ markets</li>
+                </ul>
+                <div class="entry-tags">
+                    <span class="tag">LangChain</span>
+                    <span class="tag">PySpark</span>
+                    <span class="tag">Azure</span>
+                    <span class="tag">Databricks</span>
+                    <span class="tag">CRM Analytics</span>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-top">
+                    <h4>Machine Learning Team Lead</h4>
+                    <span class="date">Aug 2021 — Dec 2021</span>
+                </div>
+                <div class="entry-company">Cognam Technologies Pvt. Ltd.</div>
+                <ul>
+                    <li>Led a team of 5 engineers developing an identity resolution system for transactional data</li>
+                    <li>Guided a project leveraging image captioning and RL to automate conversion of UI mockups into HTML/CSS</li>
+                </ul>
+                <div class="entry-tags">
+                    <span class="tag">Team Leadership</span>
+                    <span class="tag">Identity Resolution</span>
+                    <span class="tag">Reinforcement Learning</span>
+                    <span class="tag">NLP</span>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-top">
+                    <h4>Machine Learning Engineer</h4>
+                    <span class="date">May 2019 — Jul 2021</span>
+                </div>
+                <div class="entry-company">Cognam Technologies Pvt. Ltd.</div>
+                <ul>
+                    <li>Developed and deployed a face recognition system to optimize authentication workflows</li>
+                    <li>Built a spoof detection model using image distortion analysis to prevent photo/video-based attacks</li>
+                    <li>Designed an ensemble ML model for fraud detection with automated retraining and performance monitoring</li>
+                </ul>
+                <div class="entry-tags">
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">Fraud Detection</span>
+                    <span class="tag">Face Recognition</span>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-top">
+                    <h4>Software Engineer Trainee</h4>
+                    <span class="date">Jan 2019 — May 2019</span>
+                </div>
+                <div class="entry-company">Cognam Technologies Pvt. Ltd.</div>
+                <ul>
+                    <li>Conducted data analysis on financial transaction datasets to identify fraud patterns</li>
+                    <li>Applied feature engineering and ML techniques (logistic regression, decision trees, random forests) for predictive fraud detection</li>
+                </ul>
+                <div class="entry-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Scikit-learn</span>
+                    <span class="tag">Feature Engineering</span>
+                    <span class="tag">SQL</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Key Projects ── -->
+        <section>
+            <h3 class="sec-title">Key Projects</h3>
+
+            <div class="proj">
+                <h4>Centralized GenAI Platform <span class="sub">— Global Healthcare Client</span></h4>
+                <p>End-to-end agentic AI platform with modular MCP-server components, scalable Text-to-SQL and RAG pipelines supporting multiple Commercial IT use cases.</p>
+            </div>
+            <div class="proj">
+                <h4>Customer Lifetime Value Engine <span class="sub">— Medical Equipment</span></h4>
+                <p>Scalable CLV program integrating multi-system enterprise data; generated a new upsell sales funnel worth ~€6M per quarter.</p>
+            </div>
+            <div class="proj">
+                <h4>Fraud Transaction Detection System</h4>
+                <p>Ensemble ML model with automated retraining, feature engineering pipeline, and continuous performance monitoring.</p>
+            </div>
+            <div class="proj">
+                <h4>Face Recognition &amp; Spoof Detection</h4>
+                <p>Authentication system with spoof detection using image distortion analysis to prevent photo and video-based attacks.</p>
+            </div>
+        </section>
+
+        <!-- ── Education & Certifications ── -->
+        <section>
+            <h3 class="sec-title">Education &amp; Certifications</h3>
+            <div class="two-col">
+                <div>
+                    <div class="block">
+                        <h4>B.Tech — Information Technology</h4>
+                        <div class="sub-text">IIIT Vadodara</div>
+                        <div class="dim">[graduation year]</div>
+                    </div>
+                    <div class="block" style="margin-top:8px">
+                        <h4>ML Advanced Nanodegree</h4>
+                        <div class="sub-text">Udacity</div>
+                    </div>
+                </div>
+                <div>
+                    <ul>
+                        <li>Machine Learning Advanced Nanodegree</li>
+                        <li>12+ research publications &amp; articles</li>
+                        <li style="color:var(--light)">[Add more certifications]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /body -->
+</div><!-- /page -->
+
+</body>
+</html>
