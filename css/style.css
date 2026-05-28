@@ -632,100 +632,80 @@ ul { list-style: none; }
 /* ============================================
    About Section
    ============================================ */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.image-wrapper {
-    position: relative;
-    width: 300px;
-    height: 360px;
-    margin: 0 auto;
-}
-
-.profile-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 20%;
-    border-radius: 16px;
-    position: relative;
-    z-index: 1;
-    filter: grayscale(20%) contrast(1.05);
-    transition: all var(--transition-base);
-}
-
-.image-wrapper:hover .profile-photo {
-    filter: grayscale(0%) contrast(1.1);
-    transform: translate(-3px, -3px);
-}
-
-[data-theme="light"] .profile-photo {
-    filter: grayscale(10%) contrast(1.02);
-}
-
-[data-theme="light"] .image-wrapper:hover .profile-photo {
-    filter: grayscale(0%) contrast(1.05);
-}
-
-.image-placeholder {
-    width: 100%;
-    height: 100%;
-    background: var(--bg-card);
-    border-radius: 16px;
+.about-header {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    border: 2px dashed var(--border-hover);
-    position: relative;
-    z-index: 1;
+    gap: 24px;
+    margin-bottom: 36px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border-color);
 }
 
-[data-theme="light"] .image-placeholder {
-    background: var(--bg-secondary);
+.about-avatar {
+    flex-shrink: 0;
 }
 
-.image-placeholder i {
-    font-size: 3rem;
-    color: var(--accent-primary);
-    opacity: 0.5;
-}
-
-.image-placeholder span {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-.image-border {
-    position: absolute;
-    inset: 15px -15px -15px 15px;
-    border: 2px solid var(--accent-primary);
-    border-radius: 16px;
-    opacity: 0.3;
-    z-index: 0;
-    transition: all var(--transition-base);
-}
-
-.image-wrapper:hover .image-border {
-    inset: 10px -10px -10px 10px;
-    opacity: 0.5;
-}
-
-.image-dots {
-    position: absolute;
-    bottom: -25px;
-    right: -25px;
+.profile-photo-sm {
     width: 80px;
     height: 80px;
-    background-image: radial-gradient(var(--accent-primary) 1.5px, transparent 1.5px);
-    background-size: 12px 12px;
-    opacity: 0.3;
-    z-index: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    border: 2px solid var(--accent-primary);
+    filter: grayscale(10%) contrast(1.05);
+    transition: all var(--transition-base);
+}
+
+.profile-photo-sm:hover {
+    filter: grayscale(0%) contrast(1.1);
+    box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.about-intro {
+    flex: 1;
+}
+
+.about-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.about-role {
+    font-size: 0.95rem;
+    color: var(--accent-secondary);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.about-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.about-meta span {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.about-meta span i {
+    color: var(--accent-primary);
+    font-size: 0.75rem;
+}
+
+.about-body {
+    margin-bottom: 32px;
+}
+
+.about-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
 }
 
 .about-text {
@@ -736,30 +716,6 @@ ul { list-style: none; }
 
 .about-text strong {
     color: var(--text-primary);
-}
-
-.about-details {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin: 32px 0;
-    padding: 24px;
-    background: var(--bg-card);
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-}
-
-.detail-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.9rem;
-}
-
-.detail-item i {
-    color: var(--accent-primary);
-    width: 16px;
-    text-align: center;
 }
 
 /* ============================================
@@ -2327,9 +2283,21 @@ ul { list-style: none; }
         width: 100%;
     }
 
-    .about-grid {
+    .about-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-meta {
+        justify-content: center;
+    }
+
+    .about-actions {
+        justify-content: center;
+    }
+
+    .about-bottom {
         grid-template-columns: 1fr;
-        gap: 40px;
     }
 
     .skills-grid {

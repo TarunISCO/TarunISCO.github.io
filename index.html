@@ -73,14 +73,6 @@ layout: default
                 <i class="fas fa-paper-plane"></i>
             </a>
         </div>
-        <div class="hero-stats">
-            {% for stat in site.data.personal.stats %}
-            <div class="stat-item">
-                <span class="stat-number" data-count="{{ stat.number }}">0</span><span class="stat-suffix">{{ stat.suffix }}</span>
-                <span class="stat-label">{{ stat.label }}</span>
-            </div>
-            {% endfor %}
-        </div>
     </div>
     <a href="#about" class="scroll-indicator" aria-label="Scroll down">
         <div class="mouse">
@@ -96,40 +88,17 @@ layout: default
         <h2 class="section-title" data-aos="fade-up">
             <span class="section-number">01.</span> About Me
         </h2>
-        <div class="about-grid">
-            <div class="about-image" data-aos="fade-right">
-                <div class="image-wrapper">
-                    <img src="{{ site.data.personal.profile_image | relative_url }}" alt="{{ site.data.personal.name }}" class="profile-photo">
-                    <div class="image-border"></div>
-                    <div class="image-dots"></div>
-                </div>
+        <!-- Compact profile header -->
+        <div class="about-header" data-aos="fade-up">
+            <div class="about-avatar">
+                <img src="{{ site.data.personal.profile_image | relative_url }}" alt="{{ site.data.personal.name }}" class="profile-photo-sm">
             </div>
-            <div class="about-content" data-aos="fade-left">
-                {% for paragraph in site.data.personal.about %}
-                <p class="about-text">{{ paragraph }}</p>
-                {% endfor %}
-                {% if site.data.personal.career_interests %}
-                <div class="career-interests">
-                    <h4><i class="fas fa-compass"></i> What I'm Looking For</h4>
-                    <p>{{ site.data.personal.career_interests }}</p>
-                </div>
-                {% endif %}
-                {% if site.data.personal.ask_me_about %}
-                <div class="ask-me-about">
-                    <h4><i class="fas fa-comments"></i> Ask Me About</h4>
-                    <div class="ask-tags">
-                        {% for topic in site.data.personal.ask_me_about %}
-                        <span class="ask-tag">{{ topic }}</span>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endif %}
-                <div class="about-details">
+            <div class="about-intro">
+                <h3 class="about-name">{{ site.data.personal.name }}</h3>
+                <p class="about-role">{{ site.data.personal.title }}</p>
+                <div class="about-meta">
                     {% for detail in site.data.personal.details %}
-                    <div class="detail-item">
-                        <i class="{{ detail.icon }}"></i>
-                        <span>{{ detail.text }}</span>
-                    </div>
+                    <span><i class="{{ detail.icon }}"></i> {{ detail.text }}</span>
                     {% endfor %}
                 </div>
                 <div class="about-actions">
@@ -143,6 +112,31 @@ layout: default
                     </button>
                 </div>
             </div>
+        </div>
+        <!-- Full-width about text -->
+        <div class="about-body" data-aos="fade-up">
+            {% for paragraph in site.data.personal.about %}
+            <p class="about-text">{{ paragraph }}</p>
+            {% endfor %}
+        </div>
+        <!-- Two-column bottom: interests + ask me about -->
+        <div class="about-bottom" data-aos="fade-up">
+            {% if site.data.personal.career_interests %}
+            <div class="career-interests">
+                <h4><i class="fas fa-compass"></i> What I'm Looking For</h4>
+                <p>{{ site.data.personal.career_interests }}</p>
+            </div>
+            {% endif %}
+            {% if site.data.personal.ask_me_about %}
+            <div class="ask-me-about">
+                <h4><i class="fas fa-comments"></i> Ask Me About</h4>
+                <div class="ask-tags">
+                    {% for topic in site.data.personal.ask_me_about %}
+                    <span class="ask-tag">{{ topic }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
 </section>

@@ -33,22 +33,6 @@ details:
     text: "Senior Data Scientist @ Fractal"
   - icon: "fas fa-graduation-cap"
     text: "B.Tech, IT — IIIT Vadodara"
-  - icon: "fas fa-certificate"
-    text: "ML Advanced Nanodegree"
-
-stats:
-  - number: 7
-    suffix: "+"
-    label: "Years Experience"
-  - number: 30
-    suffix: "+"
-    label: "Projects Delivered"
-  - number: 12
-    suffix: "+"
-    label: "Publications"
-  - number: 5
-    suffix: "K+"
-    label: "GitHub Stars"
 
 typewriter_words:
   - "agentic AI platforms"
